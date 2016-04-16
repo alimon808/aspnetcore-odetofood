@@ -35,8 +35,7 @@ namespace OdeToFood
             }
             
             app.UseRuntimeInfoPage();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+            app.UseFileServer();
             //app.UseWelcomePage();
             app.Run(async (context) =>
             {
