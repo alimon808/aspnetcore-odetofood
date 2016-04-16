@@ -26,13 +26,19 @@ namespace OdeToFood
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IGreeter greeter)
+        public void Configure(IApplicationBuilder app, IGreeter greeter, IHostingEnvironment environment)
         {
             app.UseIISPlatformHandler();
+            if (environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            
             app.UseRuntimeInfoPage();
-            app.UseWelcomePage();
+            //app.UseWelcomePage();
             app.Run(async (context) =>
             {
+                throw new System.Exception("Error!!!");
                 var greeting = greeter.GetGreeting();
                 await context.Response.WriteAsync(greeting);
             });
