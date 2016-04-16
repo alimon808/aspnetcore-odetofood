@@ -29,7 +29,7 @@ namespace OdeToFood
         public void Configure(IApplicationBuilder app, IGreeter greeter)
         {
             app.UseIISPlatformHandler();
-
+            app.UseWelcomePage();
             app.Run(async (context) =>
             {
                 var greeting = greeter.GetGreeting();
