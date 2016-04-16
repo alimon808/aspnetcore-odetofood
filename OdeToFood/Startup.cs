@@ -35,11 +35,11 @@ namespace OdeToFood
             }
             
             app.UseRuntimeInfoPage();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             //app.UseWelcomePage();
             app.Run(async (context) =>
             {
-                throw new System.Exception("Error!!!");
                 var greeting = greeter.GetGreeting();
                 await context.Response.WriteAsync(greeting);
             });
