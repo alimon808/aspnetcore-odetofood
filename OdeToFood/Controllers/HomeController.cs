@@ -1,22 +1,28 @@
 ﻿using Microsoft.AspNet.Mvc;
 using OdeToFood.Models;
+using OdeToFood.Services;
 
 namespace OdeToFood.Controllers
 {
     public class HomeController : Controller
     {
-        Restaurant _restaurant = new Restaurant { Id = 1, Name = "Sabatino's" };
+        private IRestaurantData _restaurantData;
+
+        public HomeController(IRestaurantData restaurantData)
+        {
+            _restaurantData = restaurantData;
+        }
 
         public ViewResult Index()
         {
-            var model = _restaurant;
+            var model = _restaurantData.GetAll();
             return View(model);
         }
 
         // return default json
         public ObjectResult RestaurantJSON()
         {
-            var model = _restaurant;
+            var model = _restaurantData.GetAll();
             return new ObjectResult(model);
         }
 
