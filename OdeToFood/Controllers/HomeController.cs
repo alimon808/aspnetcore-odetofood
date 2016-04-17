@@ -5,17 +5,21 @@ namespace OdeToFood.Controllers
 {
     public class HomeController : Controller
     {
-        public ObjectResult Index()
+        Restaurant _restaurant = new Restaurant { Id = 1, Name = "Sabatino's" };
+
+        public ViewResult Index()
         {
-            var model = new Restaurant { Id = 1, Name = "Sabatino's" };
-            return new ObjectResult(model);
+            var model = _restaurant;
+            return View(model);
         }
 
         // return default json
         public ObjectResult RestaurantJSON()
         {
-            var model = new Restaurant { Id = 1, Name = "Sabatino's" };
+            var model = _restaurant;
             return new ObjectResult(model);
         }
+
+
     }
 }
