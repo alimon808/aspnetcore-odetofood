@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using System;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OdeToFood.Services;
@@ -36,14 +38,24 @@ namespace OdeToFood
             }
             
             app.UseRuntimeInfoPage();
-            app.UseFileServer();
-            app.UseMvcWithDefaultRoute();
+            //app.UseFileServer();
+            app.UseMvc(ConfigureRoute);
+            //app.UseMvcWithDefaultRoute();
             //app.UseWelcomePage();
             app.Run(async (context) =>
             {
                 var greeting = greeter.GetGreeting();
                 await context.Response.WriteAsync(greeting);
             });
+        }
+        
+        // convention based routing
+        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        {
+            // /Home/Index
+            // ? optional
+            // default to Home
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
         }
 
         // Entry point for the application.
