@@ -39,7 +39,7 @@ namespace OdeToFood
             
             app.UseRuntimeInfoPage();
             //app.UseFileServer();
-            app.UseMvc(ConfigureRoute);
+            app.UseMvc(ConfigureRoutes);
             //app.UseMvcWithDefaultRoute();
             //app.UseWelcomePage();
             app.Run(async (context) =>
@@ -50,7 +50,7 @@ namespace OdeToFood
         }
         
         // convention based routing
-        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
             // /Home/Index
             // ? optional
