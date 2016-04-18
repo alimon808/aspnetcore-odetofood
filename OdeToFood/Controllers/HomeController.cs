@@ -31,13 +31,13 @@ namespace OdeToFood.Controllers
         }
 
         [HttpPost]
-        public ViewResult Create(RestaurantEditViewModel model)
+        public IActionResult Create(RestaurantEditViewModel model)
         {
             var restaurant = new Restaurant();
             restaurant.Name = model.Name;
             restaurant.Cuisine = model.Cuisine;
             _restaurantData.Add(restaurant);
-            return View("Details", restaurant);
+            return RedirectToAction("Details", new { id=restaurant.Id });
         }
 
         public IActionResult Details(int id)
