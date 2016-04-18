@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using OdeToFood.Entities;
 
@@ -7,7 +8,7 @@ namespace OdeToFood.Services
 
     public class InMemoryRestaurantData : IRestaurantData
     {
-        public InMemoryRestaurantData()
+        static InMemoryRestaurantData()
         {
             _restaurants = new List<Restaurant>
             {
@@ -26,6 +27,12 @@ namespace OdeToFood.Services
             return _restaurants.FirstOrDefault(r => r.Id == id);
         }
 
-        List<Restaurant> _restaurants;
+        public void Add(Restaurant newRestaurant)
+        {
+            newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
+            _restaurants.Add(newRestaurant);
+        }
+
+        static List<Restaurant> _restaurants;
     }
 }
