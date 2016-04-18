@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.Mvc;
-using OdeToFood.Models;
+using OdeToFood.Entities;
 using OdeToFood.Services;
 
 namespace OdeToFood.Controllers
