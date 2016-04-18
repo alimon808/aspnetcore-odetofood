@@ -24,12 +24,19 @@ namespace OdeToFood.Controllers
             return View(model);
         }
 
+        public ViewResult Details(int id)
+        {
+            var model = _restaurantData.Get(id);
+            return View(model);
+        }
+
         // return default json
         public ObjectResult RestaurantJSON()
         {
             var model = _restaurantData.GetAll();
             return new ObjectResult(model);
         }
+
 
 
     }
