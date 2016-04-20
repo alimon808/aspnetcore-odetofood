@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using OdeToFood.Entities;
 
@@ -15,7 +16,11 @@ namespace OdeToFood.Services
         public void Add(Restaurant newRestaurant)
         {
             _context.Add(newRestaurant);
-            _context.SaveChanges();
+        }
+
+        public int Commit()
+        {
+            return _context.SaveChanges();
         }
 
         public Restaurant Get(int id)

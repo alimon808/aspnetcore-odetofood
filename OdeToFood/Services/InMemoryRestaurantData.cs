@@ -33,6 +33,11 @@ namespace OdeToFood.Services
             _restaurants.Add(newRestaurant);
         }
 
+        public int Commit()
+        {
+            return 0;
+        }
+
         static List<Restaurant> _restaurants;
     }
 }
