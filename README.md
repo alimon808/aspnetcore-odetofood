@@ -12,10 +12,10 @@ Provides everything you need to know to start building your first ASP.NET Core a
 5. Models in the MVC Framework
 6. Using the Entity Framework
 7. Razor Views
-  - Layout
+  - [Layout] (http://docs.asp.net/en/latest/mvc/views/layout.html)
   - ViewStart
   - ViewImport
-  - Tag Helpers
+  - [Tag Helpers] (http://docs.asp.net/en/latest/mvc/views/tag-helpers/intro.html)
   - Partial Views
   - View Components
 8. ASP.Net Identity
