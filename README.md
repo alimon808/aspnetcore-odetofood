@@ -7,10 +7,10 @@ Provides everything you need to know to start building your first ASP.NET Core a
 ### Agenda
 1. Course Overview
 2. Building your first ASP.NET Core Application
-3. Startup and Middleware
-4. Controllers in the MVC Framework
-5. Models in the MVC Framework
-6. Using the Entity Framework
+3. [Startup] (http://docs.asp.net/en/latest/conceptual-overview/understanding-aspnet5-apps.html#application-startup) and [Middleware] (http://docs.asp.net/en/latest/fundamentals/middleware.html)
+4. [Controllers] (http://docs.asp.net/en/latest/tutorials/first-mvc-app/adding-controller.html) in the [MVC Framework] (http://docs.asp.net/en/latest/tutorials/first-web-api.html)
+5. [Models](http://docs.asp.net/en/latest/tutorials/first-mvc-app/adding-model.html) in the [MVC Framework] (http://docs.asp.net/en/latest/tutorials/first-web-api.html)
+6. Using the [Entity Framework] (https://ef.readthedocs.org/en/latest/)
 7. Razor Views
   - [Layout] (http://docs.asp.net/en/latest/mvc/views/layout.html)
   - ViewStart
