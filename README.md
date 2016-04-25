@@ -18,7 +18,7 @@ Provides everything you need to know to start building your first ASP.NET Core a
   - [Tag Helpers] (http://docs.asp.net/en/latest/mvc/views/tag-helpers/intro.html)
   - Partial Views
   - View Components
-8. ASP.Net Identity
+8. [ASP.Net Identity](http://www.asp.net/identity)
 9. Front End Frameworks and Tools
 
 
