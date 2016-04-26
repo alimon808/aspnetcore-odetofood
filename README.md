@@ -16,9 +16,15 @@ Provides everything you need to know to start building your first ASP.NET Core a
   - ViewStart
   - ViewImport
   - [Tag Helpers] (http://docs.asp.net/en/latest/mvc/views/tag-helpers/intro.html)
+    + [Environment](http://docs.asp.net/en/latest/fundamentals/environments.html)
   - Partial Views
   - View Components
 8. [ASP.Net Identity](http://www.asp.net/identity)
 9. Front End Frameworks and Tools
+  - [Nuget](https://www.nuget.org/)
+  - [Bower](http://bower.io/)
+  - [NPM](https://www.npmjs.com/)
+  - [Gulp](http://gulpjs.com/)
+  - [CDN](http://www.asp.net/ajax/cdn)
 
 
